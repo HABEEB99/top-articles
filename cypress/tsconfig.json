@@ -1,13 +1,27 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es5", "dom"],
-    "types": ["cypress", "node"],
-    "allowJs": true,
-    "isolatedModules": false,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["cypress", "@testing-library/cypress", "node"],
+    "isolatedModules": true,
     "noEmit": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": []
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "../src",
+    "../src/vite-env.d.ts",
+    "cypress/e2e/**/*.cy.ts",
+    "./support",
+    "./support/index.d.ts",
+    "cypress/**/*.ts",
+    "cypress/**/*.d.ts"
+  ]
 }

@@ -81,13 +81,13 @@ describe("Article Flow", () => {
   });
 
   it("tests responsive design", () => {
-    cy.viewport("iphone-x");
+    cy.viewport(375, 812);
     cy.get('[data-testid="article-card"]').should(
       "have.css",
       "flex-direction",
       "column"
     );
-    cy.viewport("macbook-15");
+    cy.viewport(1440, 900);
     cy.get('[data-testid="article-card"]').should(
       "have.css",
       "display",
