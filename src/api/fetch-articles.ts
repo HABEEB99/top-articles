@@ -1,8 +1,7 @@
 import axios from "axios";
 import { IArticles } from "../interfaces/articles-interface";
 
-const API_KEY =
-  process.env.VITE_NYT_API_KEY || import.meta.env.VITE_NYT_API_KEY;
+const API_KEY = import.meta.env.VITE_NYT_API_KEY;
 
 export const fetchPopularArticles = async (): Promise<IArticles> => {
   try {
