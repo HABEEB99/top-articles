@@ -47,7 +47,10 @@ const HomePage = () => {
   if (isLoading)
     return (
       <div className="w-screen h-screen flex items-center justify-center">
-        <Loader2 className="w-12 h-12 animate-spin text-blue-500" />
+        <Loader2
+          data-testid="loading-spinner"
+          className="w-12 h-12 animate-spin text-blue-500"
+        />
       </div>
     );
 
@@ -76,6 +79,7 @@ const HomePage = () => {
 
         {/* Filter by Section */}
         <select
+          aria-label="All Sections"
           value={searchSection}
           onChange={(e) => setSearchSection(e.target.value)}
           className="p-2 border rounded-md w-full"
@@ -92,6 +96,7 @@ const HomePage = () => {
 
         {/* Filter by Author */}
         <select
+          aria-label="All Authors"
           value={searchByline}
           onChange={(e) => setSearchByline(e.target.value)}
           className="p-2 border rounded-md w-full"
@@ -108,6 +113,7 @@ const HomePage = () => {
 
         {/* Sort by Date */}
         <select
+          aria-label="Sort by Date"
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
           className="p-2 border rounded-md w-full"

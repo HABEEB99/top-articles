@@ -25,7 +25,10 @@ const ArticleCard: React.FC<IArticleCardProps> = ({ article }) => {
 
       <div className="p-4 flex flex-col justify-between flex-grow">
         <div className="mb-4">
-          <h2 className="text-lg font-semibold line-clamp-2">
+          <h2
+            data-testid="article-title"
+            className="text-lg font-semibold line-clamp-2"
+          >
             {article.title}
           </h2>
           <p className="text-sm text-gray-500 mt-2 line-clamp-2">

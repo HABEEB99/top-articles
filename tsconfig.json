@@ -2,6 +2,10 @@
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+    { "path": "./tsconfig.node.json" },
+    { "path": "./cypress/tsconfig.json" }
+  ],
+  "compilerOptions": {
+    "types": ["jest", "cypress", "@testing-library/jest-dom", "node"]
+  }
 }
