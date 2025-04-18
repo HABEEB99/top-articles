@@ -1,5 +1,5 @@
 // Mock Vite's import.meta.env
-Object.defineProperty(global, "import", {
+Object.defineProperty(globalThis, "import", {
   value: {
     meta: {
       env: {

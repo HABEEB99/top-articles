@@ -1,5 +1,5 @@
 export default {
-  preset: "ts-jest",
+  preset: "ts-jest/presets/js-with-ts-esm",
   testEnvironment: "jsdom",
   setupFilesAfterEnv: [
     "<rootDir>/src/setupTests.ts",
@@ -7,13 +7,13 @@ export default {
   ],
   moduleNameMapper: {
     "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-    "^@/(.*)$": "<rootDir>/src/$1",
   },
   transform: {
     "^.+\\.tsx?$": [
       "ts-jest",
       {
         tsconfig: "<rootDir>/tsconfig.app.json",
+        useESM: true,
       },
     ],
   },
